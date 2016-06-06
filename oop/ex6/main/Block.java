@@ -1,7 +1,7 @@
 package ex6.main;
 
 /**
- * Created by OrGibly on 06/06/16.
+ * Created by OrGibly on 06/06/16.sdfgdsgdasgdsgsags
  */
 public class Block extends Scope {
 }
