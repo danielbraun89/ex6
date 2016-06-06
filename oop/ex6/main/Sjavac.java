@@ -4,32 +4,21 @@ import java.nio.file.*;
 import java.util.*;
 
 
-
 public class Sjavac {
+    private static Scope globalScope;
     public static void main(String[] argv) {
-        List<String> lineList;
+        List<String> linesList;
         Path filepath = Paths.get(argv[0]);
         try {
-            lineList = Files.readAllLines(filepath);
-            for (String line : lineList){
-                String caseOfAction = check(line);
-                switch(caseOfAction){
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                    case 5:
-                    case 6:
-                    case 7:
-                }
-            }
+            globalScope = new Scope();
+            linesList = Files.readAllLines(filepath);
+            searchGlobalPara(linesList);
+            checkFile(linesList);
+
         }catch(SyntaxException x){
+
         }catch(IOException x){
 
         }
-    }
-    private static String check(String line){
-
     }
 }
